@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Something
+{
+public:
+	int static count;
+	Something() { count++; }
+	~Something() { count--; }
+  
+	int getNum() { return count; }
+};
+
+int Something::count = 0;   //static 변수 초기화
+
+int main(int argc, char const* argv[])
+{
+	Something first;
+	Something second;
+	
+	{
+		Something third;
+		cout << "[1] " << first.getNum() << endl;   //객체 범위 확인 등의 용도
+	}
+
+	cout << "[2] " << first.getNum() << endl;
+	return 0;
+}
