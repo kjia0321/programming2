@@ -23,9 +23,9 @@ int main(int argc, char const* argv[])
 {
 	Something first;
 	
-	first.setValue(3);					//set() 함수로 값 넣기. m_value == 3
-	cout << first.getValue() << endl;	//결과는 3
-	first.resetValue();					//reset() 함수로 값 0으로 초기화
-	printValue(first);					//클래스 밖 print 함수로 결과 확인
+	first.setValue(3);				//set() 함수로 값 넣기. m_value == 3
+	cout << first.getValue() << endl;		//결과는 3
+	first.resetValue();				//reset() 함수로 값 0으로 초기화
+	printValue(first);				//클래스 밖 print 함수로 결과 확인
 	return 0;
 }
